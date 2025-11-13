@@ -1,0 +1,61 @@
+.trip-content {
+  background-image: url("../assets/lake1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.background-overlay {
+  background: rgba(0, 0, 0, 0.45);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.planner-card {
+  background: rgba(255, 255, 255, 0.9);
+  margin-top: 1rem;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.itinerary-card {
+  margin: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 15px;
+}
+
+.css-card-slider {
+  perspective: 1000px;
+  margin: 1rem auto;
+  width: 90%;
+}
+
+.slider-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  overflow: visible;
+}
+
+.slider-card {
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  cursor: pointer;
+  position: absolute;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+}
+
+.card-image {
+  height: 220px;
+  width: 320px;
+  object-fit: cover;
+  border-radius: 15px;
+}

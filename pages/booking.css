@@ -1,0 +1,28 @@
+.booking-content {
+  background-image: url("../assets/lake3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+  min-height: 100vh;
+  color: #fff;
+}
+
+.booking-card {
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.summary {
+  margin-top: 1rem;
+  background: #f6f6f6;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.summary h3 {
+  color: #1c7c54;
+  margin-bottom: 0.5rem;
+}

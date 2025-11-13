@@ -1,0 +1,70 @@
+.basic-info-page {
+  --background: #000;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  text-align: center;
+  padding-top: 80px;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.subtitle {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 40px;
+}
+
+.input-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.input-box {
+  --background: #000;
+  --color: #fff;
+  --placeholder-color: #777;
+  --border-color: #555;
+  border: 1px solid #555;
+  border-radius: 6px;
+  height: 45px;
+  padding-left: 10px;
+  flex: 1;
+  color: #fff;
+}
+
+.gender-box {
+  width: 100%;
+  border: 1px solid #555;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  height: 45px;
+  padding-left: 10px;
+}
+
+.note {
+  font-size: 13px;
+  color: #d1b891;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+.continue-btn {
+  --background: #fff;
+  --color: #000;
+  border-radius: 6px;
+  font-weight: 500;
+}

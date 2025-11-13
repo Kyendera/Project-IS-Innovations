@@ -1,0 +1,369 @@
+/* Settings Page Styles */
+.settings-content {
+  --background: var(--ion-background-color);
+}
+
+.actions-section {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+/* Custom styles for settings items */
+.settings-item {
+  --min-height: 60px;
+}
+
+.settings-item ion-label h3 {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.settings-item ion-label p {
+  color: var(--ion-color-medium);
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* Section headers */
+.settings-section-header {
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+
+/* Progress bars for storage usage */
+.storage-progress {
+  margin-top: 8px;
+}
+
+.storage-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: var(--ion-color-medium);
+  margin-top: 4px;
+}
+
+/* Danger zone styling */
+.danger-zone {
+  border: 1px solid var(--ion-color-danger);
+  border-radius: 8px;
+  margin: 16px 0;
+}
+
+.danger-zone ion-list-header {
+  --background: var(--ion-color-danger);
+  --color: white;
+}
+
+/* Theme preview cards */
+.theme-preview {
+  display: flex;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.theme-card {
+  flex: 1;
+  border-radius: 8px;
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.theme-card.active {
+  border-color: var(--ion-color-primary);
+}
+
+.theme-light {
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e0e0e0;
+}
+
+.theme-dark {
+  background: #1a1a1a;
+  color: #ffffff;
+  border: 1px solid #333333;
+}
+
+.theme-system {
+  background: linear-gradient(135deg, #ffffff 50%, #1a1a1a 50%);
+  color: #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-system::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: var(--ion-color-medium);
+}
+
+/* Dark mode specific styles */
+@media (prefers-color-scheme: dark) {
+  .dark {
+    --ion-background-color: #121212;
+    --ion-background-color-rgb: 18,18,18;
+    
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+    
+    --ion-border-color: #222222;
+    
+    --ion-color-step-50: #1e1e1e;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+    --ion-color-step-300: #595959;
+    --ion-color-step-350: #656565;
+    --ion-color-step-400: #717171;
+    --ion-color-step-450: #7d7d7d;
+    --ion-color-step-500: #898989;
+    --ion-color-step-550: #949494;
+    --ion-color-step-600: #a0a0a0;
+    --ion-color-step-650: #acacac;
+    --ion-color-step-700: #b8b8b8;
+    --ion-color-step-750: #c4c4c4;
+    --ion-color-step-800: #d0d0d0;
+    --ion-color-step-850: #dbdbdb;
+    --ion-color-step-900: #e7e7e7;
+    --ion-color-step-950: #f3f3f3;
+
+    --ion-toolbar-background: var(--ion-color-step-50);
+    --ion-item-background: var(--ion-color-step-50);
+  }
+}
+
+/* Manual dark mode override */
+body.dark {
+  --ion-background-color: #121212;
+  --ion-background-color-rgb: 18,18,18;
+  
+  --ion-text-color: #ffffff;
+  --ion-text-color-rgb: 255,255,255;
+  
+  --ion-border-color: #222222;
+  
+  --ion-color-step-50: #1e1e1e;
+  --ion-color-step-100: #2a2a2a;
+  --ion-color-step-150: #363636;
+  --ion-color-step-200: #414141;
+  --ion-color-step-250: #4d4d4d;
+  --ion-color-step-300: #595959;
+  --ion-color-step-350: #656565;
+  --ion-color-step-400: #717171;
+  --ion-color-step-450: #7d7d7d;
+  --ion-color-step-500: #898989;
+  --ion-color-step-550: #949494;
+  --ion-color-step-600: #a0a0a0;
+  --ion-color-step-650: #acacac;
+  --ion-color-step-700: #b8b8b8;
+  --ion-color-step-750: #c4c4c4;
+  --ion-color-step-800: #d0d0d0;
+  --ion-color-step-850: #dbdbdb;
+  --ion-color-step-900: #e7e7e7;
+  --ion-color-step-950: #f3f3f3;
+
+  --ion-toolbar-background: var(--ion-color-step-50);
+  --ion-item-background: var(--ion-color-step-50);
+}
+
+/* Ensure proper contrast in dark mode */
+body.dark ion-item {
+  --background: var(--ion-color-step-50);
+}
+
+body.dark ion-list {
+  --background: var(--ion-color-step-50);
+}
+
+body.dark ion-list-header {
+  --background: var(--ion-color-step-100);
+  --color: var(--ion-text-color);
+}
+
+/* Custom styling for radio groups in dark mode */
+body.dark ion-radio {
+  --color: var(--ion-color-step-600);
+  --color-checked: var(--ion-color-primary);
+}
+
+/* Toggle styling for better visibility in dark mode */
+body.dark ion-toggle {
+  --background: var(--ion-color-step-300);
+  --background-checked: var(--ion-color-primary);
+}
+
+/* Select styling */
+body.dark ion-select::part(icon) {
+  color: var(--ion-color-step-600);
+}
+
+/* Back button styling */
+body.dark ion-back-button {
+  --color: var(--ion-color-primary);
+}
+
+/* Card styling for dark mode */
+body.dark ion-card {
+  --background: var(--ion-color-step-50);
+}
+
+/* Button adjustments for dark mode */
+body.dark ion-button[fill="outline"] {
+  --border-color: var(--ion-color-step-400);
+  --color: var(--ion-color-step-400);
+}
+
+/* List inset adjustments */
+body.dark ion-list[inset] {
+  background: var(--ion-color-step-50);
+}
+
+/* Text color adjustments for secondary text */
+body.dark .secondary-text {
+  color: var(--ion-color-step-500);
+}
+
+/* Storage usage indicators */
+.storage-usage {
+  margin: 8px 0;
+}
+
+.usage-bar {
+  height: 6px;
+  background: var(--ion-color-step-200);
+  border-radius: 3px;
+  overflow: hidden;
+  margin: 4px 0;
+}
+
+.usage-fill {
+  height: 100%;
+  background: var(--ion-color-primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .theme-preview {
+    flex-direction: column;
+  }
+  
+  .theme-card {
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 769px) {
+  .settings-content {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+
+/* Animation for theme switching */
+.theme-transition * {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Focus states for accessibility */
+ion-item:focus-within {
+  --background: var(--ion-color-step-100);
+}
+
+ion-button:focus {
+  --background: var(--ion-color-primary-shade);
+}
+
+/* Custom scrollbar for web */
+@media (min-width: 769px) {
+  .settings-content::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  .settings-content::-webkit-scrollbar-track {
+    background: var(--ion-color-step-100);
+  }
+
+  .settings-content::-webkit-scrollbar-thumb {
+    background: var(--ion-color-step-300);
+    border-radius: 4px;
+  }
+
+  .settings-content::-webkit-scrollbar-thumb:hover {
+    background: var(--ion-color-step-400);
+  }
+}
+
+/* Loading states */
+.settings-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+/* Error states */
+.settings-error {
+  text-align: center;
+  padding: 20px;
+  color: var(--ion-color-danger);
+}
+
+.settings-error ion-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* Success states */
+.settings-success {
+  text-align: center;
+  padding: 20px;
+  color: var(--ion-color-success);
+}
+
+.settings-success ion-icon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+/* Compact mode for smaller screens */
+.compact-item {
+  --min-height: 50px;
+}
+
+.compact-item ion-label {
+  font-size: 14px;
+}
+
+/* Icon sizing consistency */
+.settings-item ion-icon {
+  font-size: 20px;
+  min-width: 24px;
+}
+
+/* Section spacing */
+.settings-section {
+  margin-bottom: 24px;
+}
+
+.settings-section:last-child {
+  margin-bottom: 0;
+}
